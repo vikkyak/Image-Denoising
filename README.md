@@ -1,2 +1,2 @@
 
-# An Efficient Type-2 Fuzzy Filter with Adaptive Threshold for Salt-and-Pepper Noise Removal
+# AT-2FF: Adaptive Type-2 Fuzzy Filter for De-noising Images Corrupted with Salt-and-Pepper
