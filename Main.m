@@ -104,7 +104,7 @@ for z=1:10 % For loop for Iterations
                 end
                 lenght_G_1 = length(G_1);
                 MALD = max(ALD);
-                [T_min,T_max,T_min_max,PI,H,sigma,average_mu] = T2FM(G_1);
+                [T_min,T_max,T_min_max,PI,H,sigma,average_mu] = T2MF(G_1);
                 T_Threshold = T_max;
                 if isvector(G_1)
                     ave_PI = PI;
