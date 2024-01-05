@@ -1,7 +1,7 @@
 
 %% TypeTwoFuzzyMembershipGeneration
 
-function [T_min,T_max,T_min_max,PI,H,sigma,average_mu]=T2FM(vector)
+function [T_min,T_max,T_min_max,PI,H,sigma,average_mu]=T2MF(vector)
 p=numel(vector);
 H=floor((p+1)/2);
 mu=zeros(1,H);
