@@ -27,8 +27,8 @@ title('Pillars');
 % figure(2),imshow(im_gray_1);
 
 %% Inialization Of Parameters
-
-im_noised=imnoise(im_gray_1,'salt & pepper',0.90);
+nd = 0.90; Salt and pepper nosie density
+im_noised=imnoise(im_gray_1,'salt & pepper',nd);
 figure(3),imshow(im_noised);
 title('Pillars');
 [p,q]=size(im_noised);
@@ -68,7 +68,13 @@ for z=1:10 % For loop for Iterations
     %     c=dm;  % To terminate the loop (not necessary to use)
     for j=10:q+9 % To scan rows
         for i=10:p+9 % To scan col.
-            M = 1;  % M is half window size %% Inialization
+             if (nd <= 0.30)
+                M = 1;  % M is half window size %% Inialization # for mountain 70% M=2
+            elseif (0.30 < nd <= 80)
+                M = 2;  % M is half window size %% Inialization # for mountain 70% M=2
+            else 
+                M = 3;  % M is half window size %% Inialization # for mountain 70% M=2
+            end
             N_init = 6;   % for low noise image N can be low
             %
             S_max = 2; % upper bound of 'M'
