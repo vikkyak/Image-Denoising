@@ -69,11 +69,11 @@ for z=1:10 % For loop for Iterations
     for j=10:q+9 % To scan rows
         for i=10:p+9 % To scan col.
              if (nd <= 0.30)
-                M = 1;  % M is half window size %% Inialization # for mountain 70% M=2
+                M = 1;  % M is half window size %% Inialization 
             elseif (0.30 < nd <= 80)
-                M = 2;  % M is half window size %% Inialization # for mountain 70% M=2
+                M = 2;  % M is half window size %% Inialization 
             else 
-                M = 3;  % M is half window size %% Inialization # for mountain 70% M=2
+                M = 3;  % M is half window size %% Inialization 
             end
             N_init = 6;   % for low noise image N can be low
             %
