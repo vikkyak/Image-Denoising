@@ -8,11 +8,6 @@ mu=zeros(1,H);
 for q=1:H;
     mu(1,q)=KMM(q,vector);
 end
-% average_mu=((sum(mu))/H)*ones(1,p);
-% lembda= 4.5*abs(vector-average_mu);
-% mu_Mat=repmat(mu,p,1)';
-% lembda_vector=repmat(vector,H,1);
-% sigma=KMM(H,lembda);
 average_mu=((sum(mu))/H)*ones(1,p);
 lembda= abs(vector-average_mu);
 mu_Mat=repmat(mu,p,1)';
