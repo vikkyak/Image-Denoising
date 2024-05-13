@@ -3,7 +3,6 @@ clear;
 clc;
 
 %% Salt and Pepper Noise removal Using type 2 fuzzy system
-
 input_image=imread('Images/lena.png');
 figure(1), imshow(input_image);
 title('input image');
@@ -17,34 +16,12 @@ end
 figure(2), imshow(im_gray_1);
 title('Pillars');
 
-% time=tic;
-% % input_image=imread('peppers.bmp');
-% input_image=imread('woman.jpg');
-% figure(1),imshow(input_image);
-% % im_gray=rgb2gray(input_image);
-% im_gray=input_image;
-% im_gray_1=im2double(im_gray); % Will be easy to calculate PSNR in the end
-% figure(2),imshow(im_gray_1);
-
 %% Inialization Of Parameters
 nd = 0.90; Salt and pepper nosie density
 im_noised=imnoise(im_gray_1,'salt & pepper',nd);
 figure(3),imshow(im_noised);
 title('Pillars');
 [p,q]=size(im_noised);
-
-% % Inialising Denoised image %% Image size is being increased by 8, to take% care of edges.
-% im_denoised=0.53*ones(p+16,q+16);
-% im_denoised(9:p+8,9:q+8)=im_noised; %
-% 
-% % M=1;  % M is half window size
-% count0=0;
-% count1=0;
-% M=1;  % M is half window size %% Inialization
-% N_init = 8;   % for low noise image N can be low
-% im_denoised_pixels = zeros(p+16,q+16);
-% im_noised_pixels = zeros(p+16,q+16);
-
 %% new
 [p,q]=size(im_noised);
 im_denoised=0.73*ones(p+20,q+20);% Padding for edges
