@@ -160,16 +160,6 @@ for z=1:10 % For loop for Iterations
                     continue
                 end
 %% denoising of noisy pixels from the good pixels
-
-                % for k=1:(length(G)/2)
-                %     Mean(k)=KMM(k,G);
-                % end
-                % mean_G=((sum(Mean))/length(G));
-                % var_G=4.5*abs(G-mean_G);                %% for the Building sigma = 2.5 for rest it is 4.5
-                % var_G=mean(var_G);
-                % if var_G<=.01;
-                %     var_G=.01;
-                % end
                 mean_G=mean(G);
                 [~,~,var_G]=ksdensity(abs(G-mean_G));                
                 if var_G<=.01;
